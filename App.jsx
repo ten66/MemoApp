@@ -1,15 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import AppBar from './src/components/AppBar';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.appbar}>
-        <View style={styles.appbarInner}>
-          <Text style={styles.appbarTitle}>Memo App</Text>
-          <Text style={styles.appbarRight}>Logout</Text>
-        </View>
-      </View>
+      <AppBar />
 
       <View>
         <View style={styles.memoListItem}>
@@ -54,28 +51,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f0f4f8',
-  },
-  appbar: {
-    width: '100%',
-    height: 104,
-    backgroundColor: '#467fd3',
-    justifyContent: 'flex-end',
-  },
-  appbarInner: {
-    alignItems: 'center',
-  },
-  appbarTitle: {
-    marginBottom: 8,
-    fontSize: 22,
-    lineHeight: 32,
-    color: '#ffffff',
-    fontWeight: 'bold',
-  },
-  appbarRight: {
-    position: 'absolute',
-    right: 16,
-    bottom: 8,
-    color: 'rgba(255, 255, 255, 0.8)',
   },
   memoListItem: {
     backgroundColor: '#ffffff',
