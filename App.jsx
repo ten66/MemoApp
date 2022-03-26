@@ -14,7 +14,14 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LogIn">
+      <Stack.Navigator
+        initialRouteName="LogIn"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#467fd3' },
+          headerTitle: 'Memo App',
+          headerTitleStyle: { color: '#ffffff' },
+        }}
+      >
         <Stack.Screen name="MemoList" component={MemoListScreen} />
         <Stack.Screen name="MemoDetail" component={MemoDetailScreen} />
         <Stack.Screen name="MemoEdit" component={MemoEditScreen} />
